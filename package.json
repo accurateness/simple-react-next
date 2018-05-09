@@ -1,0 +1,23 @@
+{
+  "name": "ooop",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "flow": "flow",
+    "deps": "rimraf node_modules package-lock.json flow-typed && npm i && flow-typed install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "flow-typed": "^2.4.0",
+    "next": "^5.0.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.71.0",
+    "rimraf": "^2.6.2"
+  }
+}
