@@ -2,6 +2,7 @@
 import * as React from 'react';
 import Page from '../components/Page';
 import Text from '../components/Text';
+import Block from '../components/Block';
 
 type IndexProps = {|
   now: number,
@@ -19,8 +20,10 @@ class Index extends React.Component<IndexProps> {
   render() {
     return (
       <Page>
-        <Text>{this.props.now}</Text>
-        <Text bold>222</Text>
+        <block>
+          <Text>{this.props.now}</Text>
+          <Text bold>222</Text>
+        </block>
       </Page>
     );
   }

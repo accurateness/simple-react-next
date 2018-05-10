@@ -10,22 +10,36 @@ type MainNavProps = {|
     pathname: string,
   },
 |};
+
+const MainNavLink = withRouter(({ href, children, current }) => (
+  <Link href={href}>
+    <a>{children}</a>
+  </Link>
+));
+
 export class MainNav extends React.PureComponent<MainNavProps> {
   render() {
     console.log(this.props.router.pathname);
     return (
       <nav>
-        <Link href="/">
+        <MainNavLink href="/">
           <a>Home</a>
-        </Link>{' '}
-        |
-        <Link href="/about">
+        </MainNavLink>{' '}
+        {'|'}
+        <MainNavLink href="/about">
           <a>About</a>
-        </Link>{' '}
+        </MainNavLink>{' '}
         |
-        <Link href="/auth">
+        <MainNavLink href="/auth">
           <a>Auth</a>
-        </Link>
+        </MainNavLink>
+        <style jsx global>
+          {`
+            a {
+              text-decoration: none;
+            }
+          `}
+        </style>
       </nav>
     );
   }
