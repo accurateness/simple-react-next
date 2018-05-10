@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import Page from '../components/Page';
+import Text from '../components/Text';
 
 type IndexProps = {|
   now: number,
@@ -18,7 +19,8 @@ class Index extends React.Component<IndexProps> {
   render() {
     return (
       <Page>
-        <div>Welcome {this.props.now}</div>
+        <Text>{this.props.now}</Text>
+        <Text bold>222</Text>
       </Page>
     );
   }

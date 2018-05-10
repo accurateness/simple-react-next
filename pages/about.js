@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import Page from '../components/Page';
+import Block from '../components/Block';
 type options = 1 | 2 | 3;
 
 const a: 1 = 1;
@@ -15,7 +16,9 @@ class About extends React.Component<{}> {
   render() {
     return (
       <Page title="About us">
-        <div> About </div>
+        <Block>
+          <div> About </div>
+        </Block>
       </Page>
     );
   }

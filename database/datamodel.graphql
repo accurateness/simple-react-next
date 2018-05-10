@@ -1,0 +1,15 @@
+type User {
+  id: ID! @unique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  age: Int
+  posts: [Post!]!
+}
+
+type Post {
+  id: ID! @unique
+  title: String
+  text: String
+  author: User!
+}
